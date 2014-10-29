@@ -2,7 +2,7 @@ RestService
 ===========
 Использован Jersey RESTful Web Services framework в связке со Spring-ом<br>
 База: MongoDB<br>
-Сборка: Maven-ом
+Сборка: Maven-ом<br>
 Настроить resources\persistence.properties
 
     Create(Method: POST):
