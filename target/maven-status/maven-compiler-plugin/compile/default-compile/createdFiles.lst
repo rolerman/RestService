@@ -1,0 +1,8 @@
+com\restservice\model\Contact.class
+com\restservice\dao\ContactDAO.class
+com\restservice\config\AppConfig.class
+com\restservice\controllers\ContactRestController.class
+com\restservice\config\MongoConfig.class
+com\restservice\config\WebAppInitializer.class
+com\restservice\services\ContactService.class
+com\restservice\services\IContactService.class
