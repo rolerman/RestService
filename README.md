@@ -5,19 +5,19 @@ RestService
 Сборка: Maven-ом
 Настроить resources\persistence.properties
 
-    Create(Method: POST):<br>
-    http://localhost:8080/rest/contacts/createOrUpdate<br>
+    Create(Method: POST):
+    http://localhost:8080/rest/contacts/createOrUpdate
     example body: {"address":"testAddress","name":"testName","internationalPhone":"111-111","localPhone":"222-222"}
 
-    Update(Method: POST):<br>
-    http://localhost:8080/rest/contacts/createOrUpdate<br>
+    Update(Method: POST):
+    http://localhost:8080/rest/contacts/createOrUpdate
     example body: {"address":"testAddress","name":"testName","id":"54502827ea7032f7fffff8e4","internationalPhone":"111-111","localPhone":"222-222"}
 
-    getAllContacts(Method: GET):<br>
+    getAllContacts(Method: GET):
     http://localhost:8080/rest/contacts/getAll
 
-    getContactByName(Method: GET):<br>
+    getContactByName(Method: GET):
     http://localhost:8080/rest/contacts/getByName/{name}
 
-    deleteContact(Method: DELETE):<br>
+    deleteContact(Method: DELETE):
     http://localhost:8080/rest/contacts/delete/{id}
