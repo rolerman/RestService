@@ -1,10 +1,10 @@
 RestService
 ===========
-Использован Jersey RESTful Web Services framework в связке со Spring-ом<br>
-База: MongoDB<br>
-Сборка: Maven-ом<br>
-Настроить resources/persistence.properties<br>
-Варник target/rest-service-0.0.1.war
+Spring Jersey REST-ful Web Services<br>
+DB: MongoDB<br>
+BuildTool: Maven<br>
+Configuration: resources/persistence.properties<br>
+WebApp: target/rest-service-0.0.1.war
 
     Create(Method: POST):
     http://localhost:8080/rest/contacts/createOrUpdate
