@@ -12,28 +12,16 @@ import java.io.Serializable;
 
 @Document(collection = "contacts")
 @XmlRootElement
-@ToString()
+@Getter
+@Setter
+@ToString
 @EqualsAndHashCode(of = {"id", "name"})
 public class Contact implements Serializable {
 
     @Id
-    @Getter
-    @Setter
     private String id;
-
-    @Getter
-    @Setter
     private String name;
-
-    @Getter
-    @Setter
     private String address;
-
-    @Getter
-    @Setter
     private String localPhone;
-
-    @Getter
-    @Setter
     private String internationalPhone;
 }

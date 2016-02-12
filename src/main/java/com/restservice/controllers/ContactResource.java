@@ -1,7 +1,7 @@
 package com.restservice.controllers;
 
 import com.restservice.model.Contact;
-import com.restservice.services.IContactService;
+import com.restservice.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,10 +12,10 @@ import java.util.List;
 
 @Component
 @Path("/contacts")
-public class ContactRestController {
+public class ContactResource {
 
     @Autowired
-    private IContactService contactService;
+    private ContactService contactService;
 
     @GET
     @Path("/getAll")
@@ -36,7 +36,7 @@ public class ContactRestController {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response saveOrUpdate(Contact contact) {
         contactService.createOrUpdateContact(contact);
-        if (null == contact.getId() && contact.getId().isEmpty())
+        if (null == contact.getId() || contact.getId().isEmpty())
             return Response.status(Response.Status.CREATED).entity("contact is created").build();
         else
             return Response.status(Response.Status.OK).entity("contact is updated").build();

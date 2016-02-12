@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class ContactDAO {
+public class ContactRepository {
 
     @Autowired
     private MongoOperations mongoOperations;

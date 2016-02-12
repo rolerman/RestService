@@ -1,35 +1,18 @@
 package com.restservice.services;
 
-import com.restservice.dao.ContactDAO;
+
 import com.restservice.model.Contact;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class ContactService implements IContactService {
+public interface ContactService {
 
-    @Autowired
-    private ContactDAO contactDAO;
+    void createOrUpdateContact(Contact contact);
 
-    @Override
-    public void createOrUpdateContact(Contact contact) {
-        contactDAO.save(contact);
-    }
+    void deleteContactById(String id);
 
-    @Override
-    public void deleteContactById(String id) {
-        contactDAO.remove(id);
-    }
+    List<Contact> getAllContacts();
 
-    @Override
-    public List<Contact> getAllContacts() {
-        return contactDAO.getAll();
-    }
+    Contact getContactByName(String name);
 
-    @Override
-    public Contact getContactByName(String name) {
-        return contactDAO.get(name);
-    }
 }
